@@ -14,5 +14,5 @@ func main() {
 		w.WriteHeader(301)
 	}))
 
-	http.ListenAndServe("", nil)
+	http.ListenAndServe(":80", nil)
 }
