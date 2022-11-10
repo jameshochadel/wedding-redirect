@@ -9,8 +9,10 @@ func main() {
 		w.WriteHeader(200)
 	}))
 
-	http.ListenAndServe("", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	http.Handle("/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Add("Location", "https://sayi.do/lizzyandjames")
 		w.WriteHeader(301)
 	}))
+
+	http.ListenAndServe("", nil)
 }
