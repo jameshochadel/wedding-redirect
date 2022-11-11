@@ -6,7 +6,7 @@ import (
 
 func main() {
 	http.Handle("/healthz", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(200)
+		w.WriteHeader(204)
 	}))
 
 	http.Handle("/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
